@@ -98,6 +98,7 @@ h3 { font-size: 14px; margin: 18px 0 8px; color: var(--texte-2); text-transform:
 .carte-tete h2 { margin: 0; }
 .deux-colonnes { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .deux-colonnes > .carte { margin-bottom: 18px; min-width: 0; }
+.bandeau[hidden] { display: none; }
 .bandeau {
   background: var(--orange-fond); color: var(--orange); border: 1px solid currentColor;
   padding: 10px 14px; border-radius: var(--rayon); margin-bottom: 16px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
