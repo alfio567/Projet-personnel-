@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CBZ Gestion</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="barre-haut">
+    <button id="bouton-menu" class="btn-icone" title="Menu">☰</button>
+    <span>CBZ Gestion</span>
+  </header>
+
+  <aside class="lateral">
+    <div id="marque" class="marque"></div>
+    <nav id="menu"></nav>
+  </aside>
+
+  <main class="principal-zone">
+    <div id="bandeau" class="bandeau" hidden></div>
+    <div id="contenu"></div>
+  </main>
+
+  <!-- zone utilisée uniquement pour imprimer les reçus et bilans -->
+  <div id="zone-impression"></div>
+
+  <noscript>Cette application a besoin de JavaScript pour fonctionner.</noscript>
+
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/commandes.js"></script>
+  <script src="js/depenses.js"></script>
+  <script src="js/bilan.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
