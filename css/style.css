@@ -132,10 +132,15 @@ input, select, textarea {
 }
 input:focus, select:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color: var(--accent); }
 .formulaire label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; font-weight: 600; color: var(--texte-2); }
-.formulaire label input, .formulaire label select { font-weight: 400; color: var(--texte); }
+.formulaire label input, .formulaire label select { font-weight: 400; color: var(--texte); width: 100%; }
+.formulaire > *, .grille2 > *, .zone-remise > * { min-width: 0; }
+.formulaire .ligne-case input, .ligne-case input { width: auto; }
 .formulaire { display: grid; gap: 12px; }
 .grille2 { grid-template-columns: 1fr 1fr; }
 .grille-auto { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); align-items: end; }
+/* même hauteur pour tous les champs : titres et cases parfaitement alignés */
+.formulaire input:not([type=checkbox]):not([type=radio]), .formulaire select { height: 40px; }
+.formulaire .btn { height: 40px; }
 .plein { grid-column: 1 / -1; }
 .form-action { display: flex; align-items: flex-end; }
 .formulaire .ligne-case, .ligne-case { flex-direction: row; align-items: center; gap: 8px; color: var(--texte); }
@@ -163,6 +168,9 @@ input.qte { width: 76px; text-align: right; }
 .tableau tbody tr:hover { background: var(--surface-2); }
 .tableau.compact td, .tableau.compact th { padding: 6px 8px; }
 .tableau tfoot td { border-bottom: 0; }
+/* colonnes de chiffres : titre et valeurs alignés à droite */
+.tableau th.num, .tableau td.num { text-align: right; }
+.tableau td.actions { text-align: right; }
 .total-ligne { margin-bottom: 10px; color: var(--texte-2); }
 .total-impaye { color: var(--rouge); }
 .liste-simple { margin: 6px 0; padding-left: 20px; }

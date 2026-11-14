@@ -13,8 +13,9 @@
 
   function argent(n) {
     var v = Math.round(Number(n || 0));
-    var s = v.toLocaleString('fr-FR').replace(/ | /g, ' ');
-    return s + ' ' + (Store.data.parametres.devise || 'F');
+    // espaces insécables : un montant ne se coupe jamais sur deux lignes
+    var s = v.toLocaleString('fr-FR').replace(/[\s\u202f\u00a0]/g, '\u00a0');
+    return s + '\u00a0' + (Store.data.parametres.devise || 'F');
   }
 
   function pad(n) { return String(n).padStart(2, '0'); }
@@ -24,7 +25,7 @@
     if (!iso) return '';
     var d = new Date(iso);
     return pad(d.getDate()) + '/' + pad(d.getMonth() + 1) + '/' + d.getFullYear() +
-      ' à ' + pad(d.getHours()) + ':' + pad(d.getMinutes());
+      ' à ' + pad(d.getHours()) + ':' + pad(d.getMinutes());
   }
   function dateCourte(iso) {
     if (!iso) return '';

@@ -58,8 +58,9 @@
 
   function badgeFidele(c) {
     if (!c || !c.fidele) return '';
-    var r = c.remiseType === 'montant' ? '-' + argent(c.remiseValeur) + '/livret' : '-' + (c.remiseValeur || 0) + ' %';
-    return '<span class="badge fidele" title="Client fidèle">★ Fidèle ' + esc(r) + '</span>';
+    var v = Number(c.remiseValeur || 0);
+    var r = !v ? '' : (c.remiseType === 'montant' ? ' -' + argent(v) + '/livret' : ' -' + v + ' %');
+    return '<span class="badge fidele" title="Client fidèle">★ Fidèle' + esc(r) + '</span>';
   }
 
   function calculPanierClient(cid) {
