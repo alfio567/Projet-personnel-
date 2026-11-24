@@ -6,7 +6,41 @@
 module.exports = [
   // ============================================================
   { t: "h1", text: "1. Contexte du stage : présentation d'ODHE Groupe" },
-  { t: "todo", text: "À COMPLÉTER avec les réponses de Yannis AKAKPOVI : historique (création de Dasco Communication, passage à ODHE Groupe), organigramme, domaine et secteur d'activité, positionnement sur le marché, département de travail (tuteur, poste et missions, collègues et objectifs de l'équipe)." },
+
+  { t: "h2", text: "1.1 Historique" },
+  { t: "p", text: "L'entreprise a été créée en mars 2019 sous le nom de **DASCO Communication**. En novembre 2026, elle est devenue **ODHE Groupe SARL**, afin d'élargir ses activités, de couvrir davantage de terrain et d'internationaliser ses services. Mon stage s'est donc déroulé chez DASCO Communication, et le changement de nom est intervenu à sa fin." },
+  { t: "p", text: "ODHE est né d'une conviction : l'excellence créative n'a aucune frontière. Sa mission est de devenir la référence créative et numérique pour des marques exigeantes. Sa signature, « Nous donnons une voix visuelle à vos ambitions », et son slogan, « Créer, Communiquer, Transformer », résument cette ambition." },
+
+  { t: "h2", text: "1.2 Organisation" },
+  { t: "p", text: "ODHE Groupe SARL est dirigé par Mme DHENONWEMAN AKUAVI Odile Bernadette et compte quatre employés. Son siège se trouve à Cotonou, au Bénin, dans le quartier de Fifadji, près du CEG Zogbo. Avec une équipe resserrée, l'agence s'appuie sur des prestataires spécialisés selon les projets. Un recrutement de motion designer est actuellement en cours." },
+  { t: "img", file: "organigramme.png", type: "png", w: 600, h: 362, caption: "organigramme d'ODHE Groupe et place du stage", keepNext: true },
+
+  { t: "h2", text: "1.3 Domaine et secteur d'activité" },
+  { t: "p", text: "ODHE Groupe est une agence créative et de conseil, qui intervient dans le secteur de la communication et du numérique. Son activité est organisée en quatre pôles :", keepNext: true },
+  { t: "table", widths: [2800, 6272], headers: ["Pôle", "Activités"], rows: [
+    ["Identité et supports", "Branding et identité visuelle, print, goodies et objets publicitaires"],
+    ["Digital et technologie", "Création web, community management, solutions numériques sur mesure (OhClean, FêteBénin), création de jeux vidéo"],
+    ["Production et événementiel", "Vidéo et photo, motion design, événementiel avec FêteBénin"],
+    ["Conseil et formation", "Consulting stratégique, ODHE Academy (formations en présentiel ou en ligne, avec attestation)"],
+  ], caption: "les quatre pôles d'activité d'ODHE Groupe" },
+  { t: "p", text: "Le groupe développe aussi deux activités annexes : **ODHE Immo** et **ODHE Store**." },
+
+  { t: "h2", text: "1.4 Positionnement sur le marché" },
+  { t: "p", text: "Avec plus de sept ans d'expérience et une offre entièrement sur mesure, ODHE Groupe se présente comme un partenaire unique pour toute la communication de ses clients. Ces clients sont surtout des PME et des commerces, des écoles et des universités, des hôtels et des restaurants, des institutions et des associations, ainsi que des particuliers pour leurs événements ou leurs formations. L'agence travaille aussi avec des clients à l'étranger, au Sénégal et au Togo." },
+  { t: "p", text: "À Cotonou, ses principaux concurrents sont les agences Bamboo Communication, SKM, Hello Design, Jawuntaa et Sav+, ainsi que de nombreux freelances. Face à eux, ODHE Groupe se distingue par :", keepNext: true },
+  { t: "ul", items: [
+    "**la stratégie avant la création** : « nous pensons avec vous avant de créer pour vous » ;",
+    "**une offre complète sous un même toit**, de la stratégie jusqu'à l'événement ;",
+    "**ses propres outils numériques** (FêteBénin, OhClean), la création de jeux vidéo et une académie de formation, ce que peu d'agences proposent à Cotonou ;",
+    "**des prix accessibles** : des services à partir de 5 000 FCFA, une commande en ligne et un devis détaillé sous 24 heures ;",
+    "**un niveau d'exécution international**, avec la proximité d'une agence locale.",
+  ] },
+  { t: "p", text: "Ses valeurs sont la créativité, l'excellence, la proximité, l'innovation et l'intégrité." },
+
+  { t: "h2", text: "1.5 Département de travail" },
+  { t: "p", text: "J'ai effectué mon stage dans le pôle **Digital et technologie**, au sein du service de développement de sites web. Mon tuteur, **Yannis AKAKPOVI**, y occupe le poste de développeur web full stack : il conçoit les applications de l'agence, de la base de données jusqu'aux écrans, organise le travail de l'équipe et relit le code avant qu'il soit intégré. Je travaillais en binôme avec **Falonne EDAH**, elle aussi étudiante à Epitech." },
+  { t: "p", text: "L'objectif de l'équipe était de concevoir et de mettre en ligne des plateformes web complètes et fiables pour l'agence et ses clients. Pendant mon stage, cela s'est traduit par deux projets : TopSender et AlloMairie." },
+  { t: "todo", text: "À VÉRIFIER avec Yannis : les missions de son poste décrites ci-dessus (je les ai déduites de l'organisation des projets)." },
 
   // ============================================================
   { t: "h1", text: "2. Missions prévues" },
@@ -33,7 +67,7 @@ module.exports = [
     ["Services externes", "FedaPay (mobile money), Brevo (e-mails)", "Nodemailer (e-mails)"],
     ["Mise en ligne", "Render, Gunicorn, Docker", "Render (API), Vercel (site)"],
     ["Travail en équipe", "Git, GitHub, pull requests", "Git, GitHub"],
-  ], caption: "Tableau 1 : outils utilisés sur les deux projets" },
+  ], caption: "outils utilisés sur les deux projets" },
   { t: "p", text: "**Impact de mon travail sur l'avancement.** Le backend devait être prêt pour que les pages puissent afficher de vraies données. En livrant l'architecture du serveur dès la troisième semaine de stage, puis les routes de l'API module par module, j'ai permis à l'équipe de brancher les pages au fur et à mesure. La mise en ligne sur Render a ensuite permis à toute l'équipe de tester l'application dans des conditions réelles." },
 
   // ============================================================
@@ -42,7 +76,7 @@ module.exports = [
   { t: "h2", text: "3.1 TopSender" },
   { t: "h3", text: "Présentation du projet" },
   { t: "p", text: "TopSender est une plateforme de campagnes publicitaires. Elle met en relation deux types d'utilisateurs : les **annonceurs**, qui achètent un pack et lancent des campagnes par SMS, par e-mail ou sur les réseaux sociaux, et les **diffuseurs**, qui partagent ces campagnes, envoient une preuve de partage et sont rémunérés pour cela. Les paiements se font par mobile money, le moyen de paiement le plus utilisé au Bénin." },
-  { t: "img", file: "topsender-architecture.png", type: "png", w: 600, h: 187, caption: "Figure 1 : architecture technique de TopSender" },
+  { t: "img", file: "topsender-architecture.png", type: "png", w: 600, h: 187, caption: "architecture technique de TopSender" },
 
   { t: "h3", text: "Mes réalisations" },
   { t: "p", text: "J'ai été le principal développeur du backend de TopSender (27 contributions entre le 22 juillet et le 7 octobre 2026). Mes réalisations sont les suivantes :" },
@@ -62,8 +96,8 @@ module.exports = [
   { t: "h3", text: "Présentation du projet" },
   { t: "p", text: "AlloMairie est une plateforme de participation citoyenne. Sans créer de compte, les habitants peuvent signaler une anomalie (voirie, éclairage, déchets, eau), signaler un problème sur une infrastructure (route, pont, école, marché), faire une suggestion ou féliciter leur mairie. Les agents et les administrateurs de chaque commune traitent ces messages depuis un espace dédié, et un superadministrateur suit l'ensemble des 77 communes du Bénin." },
   { t: "p", text: "Après la fin de mon stage, le projet a été élargi à l'ensemble des institutions de l'État et renommé **allo.bj**. Le parcours « Écrire à ma mairie » de la nouvelle plateforme reprend directement AlloMairie." },
-  { t: "pair", a: { file: "allo-accueil.jpg", caption: "Figure 2 : page d'accueil de la plateforme (version allo.bj)" },
-               b: { file: "allo-ecrire-mairie.jpg", caption: "Figure 3 : le parcours « Écrire à ma mairie », issu d'AlloMairie" } },
+  { t: "pair", a: { file: "allo-accueil.jpg", caption: "page d'accueil de la plateforme (version allo.bj)" },
+               b: { file: "allo-ecrire-mairie.jpg", caption: "le parcours « Écrire à ma mairie », issu d'AlloMairie" } },
 
   { t: "h3", text: "Mes réalisations" },
   { t: "p", text: "J'ai réalisé l'essentiel du backend d'AlloMairie pendant le stage (11 des 14 contributions au backend, entre le 11 août et le 5 octobre 2026) :" },
@@ -77,8 +111,8 @@ module.exports = [
     "**Frontend** : pages de l'espace administrateur et superadministrateur, page de participation, vue d'ensemble et statistiques.",
     "**Mise en ligne** : API sur Render, site sur Vercel et base de données sur Supabase.",
   ] },
-  { t: "pair", a: { file: "allo-admin-mairie.jpg", caption: "Figure 4 : tableau de bord de l'administrateur d'une mairie" },
-               b: { file: "allo-par-commune.jpg", caption: "Figure 5 : suivi commune par commune (superadministrateur)" } },
+  { t: "pair", a: { file: "allo-admin-mairie.jpg", caption: "tableau de bord de l'administrateur d'une mairie" },
+               b: { file: "allo-par-commune.jpg", caption: "suivi commune par commune (superadministrateur)" } },
   { t: "p", text: "Les captures d'écran proviennent de la version actuelle de la plateforme et ont été réalisées avec des données de démonstration : les noms et les messages affichés sont fictifs." },
 
   { t: "h2", text: "3.3 Points de facilité" },

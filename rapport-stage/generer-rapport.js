@@ -126,8 +126,11 @@ function runs(text, extra = {}) {
       : new TextRun({ text: part, ...extra }));
 }
 
-const legende = (text) => new Paragraph({
-  style: "Legende", alignment: AlignmentType.CENTER, children: [new TextRun(text)],
+// Légendes numérotées automatiquement : "Figure n : ..." / "Tableau n : ..."
+const compteur = { Figure: 0, Tableau: 0 };
+const legende = (text, type = "Figure") => new Paragraph({
+  style: "Legende", alignment: AlignmentType.CENTER,
+  children: [new TextRun(`${type} ${++compteur[type]} : ${text}`)],
 });
 
 const SANS_BORD = { style: BorderStyle.NONE, size: 0, color: "FFFFFF" };
@@ -178,7 +181,7 @@ function rendre(bloc) {
         new Table({ width: { size: bloc.widths.reduce((a, b) => a + b), type: WidthType.DXA }, columnWidths: bloc.widths,
           rows: [new TableRow({ tableHeader: true, children: bloc.headers.map((h, i) => cell(h, i, true)) }),
                  ...bloc.rows.map((r) => new TableRow({ cantSplit: true, children: r.map((c, i) => cell(c, i, false)) }))] }),
-        legende(bloc.caption)];
+        legende(bloc.caption, "Tableau")];
     }
     default: throw new Error("Bloc inconnu : " + bloc.t);
   }
