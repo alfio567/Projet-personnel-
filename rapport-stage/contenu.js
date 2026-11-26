@@ -21,7 +21,7 @@ module.exports = [
 
   { t: "h1u", text: "Introduction" },
   { t: "p", text: "Dans le cadre de ma deuxième année à Epitech, j'ai effectué un stage de quatre mois, du 6 juillet au 6 novembre 2026, au sein d'ODHE Groupe, une agence créative et de conseil basée à Cotonou, connue jusqu'en novembre 2026 sous le nom de DASCO Communication." },
-  { t: "todo", text: "À COMPLÉTER : comment tu as trouvé ce stage (candidature spontanée, contact, réseau d'Epitech…) et pourquoi tu as choisi cette entreprise." },
+  { t: "p", text: "J'ai obtenu ce stage lors du Job Fair organisé par Epitech, où j'ai rencontré l'entreprise. Ce qui m'a attiré chez ODHE Groupe, c'est la possibilité de travailler sur des plateformes web complètes, développées par l'agence elle-même, de la base de données jusqu'à la mise en ligne." },
   { t: "p", text: "J'y ai occupé le poste de développeur web full stack au sein du pôle Digital et technologie, sous la responsabilité de M. Yannis AKAKPOVI. Ma mission principale était de concevoir et de développer, en binôme, le backend de deux plateformes web : TopSender, qui met en relation des annonceurs et des diffuseurs de publicités, et AlloMairie, qui permet aux citoyens béninois d'écrire à leur mairie. Ce stage s'inscrit dans mon projet professionnel : poursuivre dans le développement web, puis me spécialiser dans la data et l'ingénierie de l'intelligence artificielle." },
   { t: "p", text: "Ce rapport présente d'abord l'entreprise et le contexte du stage, puis les missions qui m'ont été confiées. Il détaille ensuite le travail réalisé sur chacun des deux projets, avec les facilités et les difficultés rencontrées, avant de dresser le bilan de cette expérience." },
 
