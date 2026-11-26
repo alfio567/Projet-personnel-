@@ -33,7 +33,7 @@ module.exports = [
   { t: "p", text: "ODHE est né d'une conviction : l'excellence créative n'a aucune frontière. Sa mission est de devenir la référence créative et numérique pour des marques exigeantes. Sa signature, « Nous donnons une voix visuelle à vos ambitions », et son slogan, « Créer, Communiquer, Transformer », résument cette ambition." },
 
   { t: "h2", text: "1.2 Organisation" },
-  { t: "p", text: "ODHE Groupe SARL est dirigé par Mme DHENONWEMAN AKUAVI Odile Bernadette et compte quatre employés. Son siège se trouve à Cotonou, au Bénin, dans le quartier de Fifadji, près du CEG Zogbo. Avec une équipe resserrée, l'agence s'appuie sur des prestataires spécialisés selon les projets. Un recrutement de motion designer est actuellement en cours." },
+  { t: "p", text: "ODHE Groupe SARL est dirigé par M. Hermann ASSEVI, chef d'entreprise, et compte quatre employés. Son siège se trouve à Cotonou, au Bénin, dans le quartier de Fifadji, près du CEG Zogbo. Avec une équipe resserrée, l'agence s'appuie sur des prestataires spécialisés selon les projets. Un recrutement de motion designer est actuellement en cours." },
   { t: "img", file: "organigramme.png", type: "png", w: 600, h: 362, caption: "organigramme d'ODHE Groupe et place du stage", keepNext: true },
 
   { t: "h2", text: "1.3 Domaine et secteur d'activité" },
