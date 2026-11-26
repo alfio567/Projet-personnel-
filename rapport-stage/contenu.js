@@ -5,6 +5,27 @@
 
 module.exports = [
   // ============================================================
+  { t: "h1u", text: "Résumé" },
+  { t: "p", text: "Ce rapport présente le stage de quatre mois que j'ai effectué du 6 juillet au 6 novembre 2026, dans le cadre de ma deuxième année à Epitech, au sein de l'agence ODHE Groupe (anciennement DASCO Communication), à Cotonou. Il montre comment un étudiant peut contribuer, dès sa deuxième année, au développement de plateformes web réelles, et ce que cette expérience lui apporte." },
+  { t: "p", text: "Intégré au pôle Digital et technologie en tant que développeur web full stack, j'ai travaillé en binôme sur deux projets : **TopSender**, une plateforme de campagnes publicitaires qui relie annonceurs et diffuseurs, et **AlloMairie**, une plateforme de participation citoyenne pour les 77 communes du Bénin, devenue depuis allo.bj. J'ai conçu et développé l'essentiel du backend de ces deux plateformes, avec Django pour l'une et Node.js et Prisma pour l'autre, j'ai sécurisé les comptes des utilisateurs et j'ai mis les deux API en ligne." },
+  { t: "p", text: "Ce stage m'a permis de maîtriser de nouvelles technologies, le déploiement d'applications et le travail en équipe. Il m'a aussi montré que je dois encore progresser dans la conception d'interfaces, et il conforte mon projet de devenir expert en data et en ingénierie de l'intelligence artificielle." },
+
+  { t: "h1u", text: "Remerciements" },
+  { t: "p", text: "Je tiens tout d'abord à remercier **ODHE Groupe**, anciennement DASCO Communication, de m'avoir accueilli pendant ces quatre mois et de m'avoir donné l'opportunité de travailler sur de vrais projets, destinés à de vrais utilisateurs." },
+  { t: "p", text: "Je remercie tout particulièrement **M. Hermann ASSEVI** pour sa confiance et pour l'accueil qu'il m'a réservé au sein de l'entreprise." },
+  { t: "p", text: "Je remercie également mon tuteur de stage, **M. Yannis AKAKPOVI**, développeur web full stack, pour sa disponibilité et ses conseils tout au long du stage. Il m'a guidé dans la découverte de nouvelles technologies et m'a appris à travailler avec rigueur sur des projets menés en équipe." },
+  { t: "p", text: "Enfin, je remercie l'équipe pédagogique d'**Epitech** pour son accompagnement et pour la formation qui m'a préparé à cette première expérience professionnelle." },
+
+  { t: "h1u", text: "Sommaire" },
+  { t: "toc" },
+
+  { t: "h1u", text: "Introduction" },
+  { t: "p", text: "Dans le cadre de ma deuxième année à Epitech, j'ai effectué un stage de quatre mois, du 6 juillet au 6 novembre 2026, au sein d'ODHE Groupe, une agence créative et de conseil basée à Cotonou, connue jusqu'en novembre 2026 sous le nom de DASCO Communication." },
+  { t: "todo", text: "À COMPLÉTER : comment tu as trouvé ce stage (candidature spontanée, contact, réseau d'Epitech…) et pourquoi tu as choisi cette entreprise." },
+  { t: "p", text: "J'y ai occupé le poste de développeur web full stack au sein du pôle Digital et technologie, sous la responsabilité de M. Yannis AKAKPOVI. Ma mission principale était de concevoir et de développer, en binôme, le backend de deux plateformes web : TopSender, qui met en relation des annonceurs et des diffuseurs de publicités, et AlloMairie, qui permet aux citoyens béninois d'écrire à leur mairie. Ce stage s'inscrit dans mon projet professionnel : poursuivre dans le développement web, puis me spécialiser dans la data et l'ingénierie de l'intelligence artificielle." },
+  { t: "p", text: "Ce rapport présente d'abord l'entreprise et le contexte du stage, puis les missions qui m'ont été confiées. Il détaille ensuite le travail réalisé sur chacun des deux projets, avec les facilités et les difficultés rencontrées, avant de dresser le bilan de cette expérience." },
+
+  // ============================================================
   { t: "h1", text: "1. Contexte du stage : présentation d'ODHE Groupe" },
 
   { t: "h2", text: "1.1 Historique" },
@@ -38,9 +59,8 @@ module.exports = [
   { t: "p", text: "Ses valeurs sont la créativité, l'excellence, la proximité, l'innovation et l'intégrité." },
 
   { t: "h2", text: "1.5 Département de travail" },
-  { t: "p", text: "J'ai effectué mon stage dans le pôle **Digital et technologie**, au sein du service de développement de sites web. Mon tuteur, **Yannis AKAKPOVI**, y occupe le poste de développeur web full stack : il conçoit les applications de l'agence, de la base de données jusqu'aux écrans, organise le travail de l'équipe et relit le code avant qu'il soit intégré. Je travaillais en binôme avec **Falonne EDAH**, elle aussi étudiante à Epitech." },
+  { t: "p", text: "J'ai effectué mon stage dans le pôle **Digital et technologie**, au sein du service de développement de sites web. Mon tuteur, **Yannis AKAKPOVI**, y occupe le poste de développeur web full stack : il développe les applications web de l'agence et encadre les stagiaires de l'équipe. Je travaillais en binôme avec **Falonne EDAH**, elle aussi étudiante à Epitech." },
   { t: "p", text: "L'objectif de l'équipe était de concevoir et de mettre en ligne des plateformes web complètes et fiables pour l'agence et ses clients. Pendant mon stage, cela s'est traduit par deux projets : TopSender et AlloMairie." },
-  { t: "todo", text: "À VÉRIFIER avec Yannis : les missions de son poste décrites ci-dessus (je les ai déduites de l'organisation des projets)." },
 
   // ============================================================
   { t: "h1", text: "2. Missions prévues" },
@@ -76,6 +96,8 @@ module.exports = [
   { t: "h2", text: "3.1 TopSender" },
   { t: "h3", text: "Présentation du projet" },
   { t: "p", text: "TopSender est une plateforme de campagnes publicitaires. Elle met en relation deux types d'utilisateurs : les **annonceurs**, qui achètent un pack et lancent des campagnes par SMS, par e-mail ou sur les réseaux sociaux, et les **diffuseurs**, qui partagent ces campagnes, envoient une preuve de partage et sont rémunérés pour cela. Les paiements se font par mobile money, le moyen de paiement le plus utilisé au Bénin." },
+  { t: "pair", a: { file: "topsender-accueil.jpg", h: 181, caption: "page d'accueil du site public de TopSender" },
+               b: { file: "topsender-roles.jpg", h: 175, caption: "les deux rôles : annonceurs et diffuseurs" } },
   { t: "img", file: "topsender-architecture.png", type: "png", w: 600, h: 187, caption: "architecture technique de TopSender" },
 
   { t: "h3", text: "Mes réalisations" },
@@ -90,7 +112,8 @@ module.exports = [
     "**Frontend** : routes de l'application, pages de connexion et d'inscription, tableau de bord et déconnexion automatique après une période d'inactivité.",
   ] },
   { t: "p", text: "**Rendu.** L'API de TopSender est en ligne sur Render et alimente l'interface React de la plateforme." },
-  { t: "todo", text: "À AJOUTER : 2 à 4 captures d'écran de TopSender (accueil, inscription avec OTP, tableau de bord annonceur ou diffuseur, panneau admin)." },
+  { t: "pair", a: { file: "topsender-fonctionnement.jpg", h: 181, caption: "le parcours d'une campagne, du lancement au paiement des diffuseurs" },
+               b: { file: "topsender-tarifs.jpg", h: 153, caption: "les offres proposées aux annonceurs" } },
 
   { t: "h2", text: "3.2 AlloMairie (aujourd'hui allo.bj)" },
   { t: "h3", text: "Présentation du projet" },
@@ -140,4 +163,10 @@ module.exports = [
 
   { t: "h2", text: "4.3 Ce que j'aurais aimé avoir de plus" },
   { t: "p", text: "J'aurais aimé disposer de plus de temps pour approfondir mes connaissances en frontend. Le backend a occupé la plus grande partie de mon stage, et je n'ai pas pu aller aussi loin que je le souhaitais dans la conception d'interfaces. C'est un point que je compte travailler pendant la suite de ma formation, afin de devenir un développeur full stack plus complet." },
+
+  // ============================================================
+  { t: "h1u", text: "Conclusion" },
+  { t: "p", text: "Pendant quatre mois chez ODHE Groupe, j'ai participé au développement de deux plateformes web réelles. Sur TopSender comme sur AlloMairie, j'ai conçu et développé l'essentiel du backend, sécurisé les comptes des utilisateurs et mis les applications en ligne. AlloMairie a depuis été élargie pour devenir allo.bj, une plateforme nationale, ce qui montre que les bases posées pendant le stage étaient solides." },
+  { t: "p", text: "Je garde une impression très positive de ce stage. J'ai découvert le travail sur des projets destinés à de vrais utilisateurs, j'ai appris de nouvelles technologies comme Django, Node.js et Prisma, et j'ai beaucoup progressé dans le travail en équipe grâce à mon binôme et à mon tuteur. Cette expérience m'a confirmé mon envie de continuer dans le développement web, tout en me montrant le point que je dois encore travailler : la conception d'interfaces." },
+  { t: "p", text: "Pour la suite, je souhaite approfondir mes compétences en frontend afin de devenir un développeur full stack complet. À plus long terme, mon ambition est de devenir expert en data et en ingénierie de l'intelligence artificielle, sans abandonner le web. Le travail sur les bases de données, les API et les statistiques que j'ai mené pendant ce stage en est une première étape : les données sont au cœur de toute application, et savoir les structurer, les protéger et les exploiter est la base de l'ingénierie de la donnée." },
 ];

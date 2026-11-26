@@ -11,6 +11,9 @@ const {
   Table, TableRow, TableCell, WidthType, Footer, PageNumber, VerticalAlign,
 } = require("docx");
 const CONTENU = require("./contenu");
+// Numéros de page des titres, calculés par construire.sh à partir du rendu PDF
+const PAGES_JSON = path.join(__dirname, "pages.json");
+const PAGES = fs.existsSync(PAGES_JSON) ? JSON.parse(fs.readFileSync(PAGES_JSON, "utf8")) : {};
 
 const DIR = __dirname;
 const img = (f) => fs.readFileSync(path.join(DIR, "images", f));
@@ -139,7 +142,19 @@ const LARGEUR = 11906 - 2 * cm(2.5); // largeur du texte en DXA
 
 function rendre(bloc) {
   switch (bloc.t) {
-    case "h1": return [new Paragraph({ heading: HeadingLevel.HEADING_1, pageBreakBefore: true, children: [new TextRun(bloc.text)] })];
+    case "h1": case "h1u": return [new Paragraph({ heading: HeadingLevel.HEADING_1, pageBreakBefore: true, children: [new TextRun(bloc.text)] })];
+    case "toc": {
+      const entrees = CONTENU.filter((b) => ["h1", "h1u", "h2"].includes(b.t) && b.text !== "Sommaire");
+      return entrees.map((b) => new Paragraph({
+        tabStops: [{ type: TabStopType.RIGHT, position: LARGEUR, leader: "dot" }],
+        indent: { left: b.t === "h2" ? 400 : 0 },
+        spacing: { before: b.t === "h2" ? 0 : 160, after: 60, line: 300 },
+        children: [
+          new TextRun({ text: b.text, bold: b.t !== "h2", color: b.t !== "h2" ? NAVY : undefined, size: 24 }),
+          new TextRun({ text: "\t" + (PAGES[b.text] || "0"), bold: b.t !== "h2", size: 24 }),
+        ],
+      }));
+    }
     case "h2": return [new Paragraph({ heading: HeadingLevel.HEADING_2, children: [new TextRun(bloc.text)] })];
     case "h3": return [new Paragraph({ heading: HeadingLevel.HEADING_3, children: [new TextRun(bloc.text)] })];
     case "p": return [new Paragraph({ style: "Corps", keepNext: !!bloc.keepNext, children: runs(bloc.text) })];
@@ -159,7 +174,7 @@ function rendre(bloc) {
         margins: { left: 60, right: 60 },
         children: [
           new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 120, after: 60 }, children: [
-            new ImageRun({ type: "jpg", data: img(x.file), transformation: { width: 290, height: 181 } })] }),
+            new ImageRun({ type: "jpg", data: img(x.file), transformation: { width: 290, height: x.h || 181 } })] }),
           legende(x.caption)],
       });
       return [new Table({ width: { size: 2 * w, type: WidthType.DXA }, columnWidths: [w, w],
