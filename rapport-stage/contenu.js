@@ -12,7 +12,7 @@ module.exports = [
 
   { t: "h1u", text: "Remerciements" },
   { t: "p", text: "Je tiens tout d'abord à remercier **ODHE Groupe**, anciennement DASCO Communication, de m'avoir accueilli pendant ces quatre mois et de m'avoir donné l'opportunité de travailler sur de vrais projets, destinés à de vrais utilisateurs." },
-  { t: "p", text: "Je remercie tout particulièrement **M. Hermann ASSEVI** pour sa confiance et pour l'accueil qu'il m'a réservé au sein de l'entreprise." },
+  { t: "p", text: "Je remercie tout particulièrement **M. Hermann ASSEVI**, chef d'entreprise, qui nous a dirigés tout au long du stage, pour sa confiance et pour l'accueil qu'il m'a réservé au sein de l'entreprise." },
   { t: "p", text: "Je remercie également mon tuteur de stage, **M. Yannis AKAKPOVI**, développeur web full stack, pour sa disponibilité et ses conseils tout au long du stage. Il m'a guidé dans la découverte de nouvelles technologies et m'a appris à travailler avec rigueur sur des projets menés en équipe." },
   { t: "p", text: "Enfin, je remercie l'équipe pédagogique d'**Epitech** pour son accompagnement et pour la formation qui m'a préparé à cette première expérience professionnelle." },
 
